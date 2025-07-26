@@ -40,12 +40,130 @@
         </div>
     </div>
 
-    <!-- Main Content Shell -->
+    <!-- Navigation Bar -->
+    <header id="site-header">
+        <nav class="navbar section-content" aria-label="Main Navigation">
+            <a href="#home" class="nav-logo" aria-label="Fresh Juice Shop Home">
+                <img src="Assets/logo2.jpg" alt="Fresh Juice Shop Logo" class="logo">
+                <span class="logo-wrapper">
+                    <span class="logo-text">Fresh Juice</span>
+                    <span class="logo-tagline">Artisan Fruit Bar</span>
+                </span>
+            </a>
+
+            <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li class="mobile-menu-header">
+                    <div class="nav-logo">
+                        <img src="Assets/logo2.jpg" alt="" class="logo">
+                        <span class="logo-text">Fresh Juice</span>
+                    </div>
+                    <button id="menu-close-button" class="close-menu-btn" aria-label="Close navigation menu">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu" class="nav-link">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#gallery" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-cta-item">
+                    <a href="#menu" class="btn btn-primary btn-sm nav-cta">
+                        <i class="fa-solid fa-blender"></i> Order Now
+                    </a>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="#menu" class="btn btn-primary btn-sm desktop-order-btn">
+                    <i class="fa-solid fa-blender"></i> Order Now
+                </a>
+                <button id="menu-open-button" class="menu-toggle-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
     <main id="main-content">
-        <div class="section-content" style="padding: 4rem 1rem; text-align: center;">
-            <h1>Fresh Juice Shop</h1>
-            <p>Real Fruits. Natural Flavours. Pure Refreshment.</p>
-        </div>
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
+            <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
+            
+            <div class="section-content hero-container">
+                <div class="hero-details">
+                    <div class="hero-pill">
+                        <span class="pill-icon"><i class="fa-solid fa-leaf"></i></span>
+                        <span class="pill-text">100% Real Fruit • Cold Pressed Fresh Daily</span>
+                    </div>
+                    <h1 class="hero-title">Freshness in Every Sip.</h1>
+                    <h2 class="hero-subtitle">Real Fruits. Natural Flavours. Pure Refreshment.</h2>
+                    <p class="hero-description">
+                        Discover refreshing fruit juices made for every mood. Enjoy vibrant flavours, fresh ingredients, and a delicious boost in every glass.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#menu" class="btn btn-primary">
+                            <span>Explore Our Menu</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Contact Us</span>
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>No Added Sugar</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Pure Whole Fruits</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Freshly Prepared</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrapper">
+                    <div class="image-glow" aria-hidden="true"></div>
+                    <img src="Assets/image1-removebg-preview.png" alt="Refreshing tropical fruit juice with fresh citrus fruits" class="hero-image">
+                    
+                    <!-- Floating Accent Badges -->
+                    <div class="floating-badge badge-top">
+                        <div class="badge-icon"><i class="fa-solid fa-award"></i></div>
+                        <div class="badge-content">
+                            <strong>Signature Quality</strong>
+                            <span>Handpicked Daily</span>
+                        </div>
+                    </div>
+                    
+                    <div class="floating-badge badge-bottom">
+                        <div class="badge-icon"><i class="fa-solid fa-droplet"></i></div>
+                        <div class="badge-content">
+                            <strong>Cold-Pressed</strong>
+                            <span>Maximum Flavour</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <script src="script.js"></script>
