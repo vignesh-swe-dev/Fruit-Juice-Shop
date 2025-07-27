@@ -416,3 +416,229 @@ button {
 .menu-toggle-btn:hover {
     background: rgba(14, 59, 46, 0.06);
 }
+
+/* 6. HERO SECTION */
+.hero-section {
+    position: relative;
+    padding: 60px 0 90px;
+    background: linear-gradient(180deg, rgba(243, 239, 234, 0.5) 0%, var(--bg-page) 100%);
+    overflow: hidden;
+}
+
+/* Decorative ambient blobs */
+.hero-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.45;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-blob-1 {
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(255, 107, 53, 0.35) 0%, rgba(255, 107, 53, 0) 70%);
+    top: -80px;
+    right: 5%;
+}
+
+.hero-blob-2 {
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(34, 197, 94, 0.25) 0%, rgba(34, 197, 94, 0) 70%);
+    bottom: -40px;
+    left: -60px;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 48px;
+}
+
+.hero-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background: rgba(14, 59, 46, 0.06);
+    border: 1px solid var(--border-medium);
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.hero-pill .pill-icon i {
+    color: var(--color-accent-lime);
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    color: var(--color-primary);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    margin-bottom: 12px;
+}
+
+.hero-subtitle {
+    font-family: var(--font-heading);
+    font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+    font-weight: 600;
+    color: var(--color-accent-orange);
+    line-height: 1.3;
+    margin-bottom: 18px;
+}
+
+.hero-description {
+    font-size: clamp(1.05rem, 1.3vw, 1.15rem);
+    color: var(--text-body);
+    line-height: 1.7;
+    margin-bottom: 32px;
+    max-width: 540px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+}
+
+.hero-features {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-medium);
+}
+
+.hero-features .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+.hero-features .feature-item i {
+    color: var(--color-accent-lime);
+    font-size: 1rem;
+}
+
+/* Hero Image & Floating Cards */
+.hero-image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-glow {
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(255, 107, 53, 0.2) 0%, rgba(34, 197, 94, 0.15) 50%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+    animation: pulse-glow 6s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-glow {
+    0% { transform: scale(0.92); opacity: 0.6; }
+    100% { transform: scale(1.08); opacity: 0.9; }
+}
+
+.hero-image {
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+    max-height: 520px;
+    object-fit: contain;
+    border-radius: var(--radius-xl);
+    filter: drop-shadow(0 20px 30px rgba(14, 59, 46, 0.18));
+    transition: transform var(--transition-normal);
+}
+
+.hero-image-wrapper:hover .hero-image {
+    transform: scale(1.02);
+}
+
+/* Floating Badges */
+.floating-badge {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 12px 18px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    animation: float 4s ease-in-out infinite alternate;
+}
+
+.floating-badge .badge-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.badge-top {
+    top: 30px;
+    left: -20px;
+}
+
+.badge-top .badge-icon {
+    background: #FEF3C7;
+    color: #D97706;
+}
+
+.badge-bottom {
+    bottom: 30px;
+    right: -20px;
+    animation-delay: 2s;
+}
+
+.badge-bottom .badge-icon {
+    background: #DCFCE7;
+    color: #16A34A;
+}
+
+.floating-badge .badge-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.floating-badge .badge-content strong {
+    font-size: 0.88rem;
+    color: var(--color-primary);
+    line-height: 1.2;
+}
+
+.floating-badge .badge-content span {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-8px); }
+}
